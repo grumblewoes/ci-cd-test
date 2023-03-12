@@ -5,6 +5,6 @@ EXPOSE 8080
 # set a docker volume if you want
 VOLUME /backend_volume
 # Add the jar file
-ADD /target/*.jar demoex5_2-docker-demo-0.0.1-SNAPSHOT.jar
+ADD /target/*.jar ex6_1-coverage-demo-0.0.1-SNAPSHOT.jar
 # Start the application
-ENTRYPOINT ["java", "-jar", "/demoex5_2-docker-demo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/ex6_1-coverage-demo-0.0.1-SNAPSHOT.jar"]
