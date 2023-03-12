@@ -8,20 +8,21 @@
         <version>3.0.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>via.doc1</groupId>
-    <artifactId>ex6_1-coverage-demo</artifactId>
+    <artifactId>ex7-test-coverage</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ex6_1-coverage-demo</name>
-    <description>ex6_1-coverage-demo</description>
+    <name>ex7_test-coverage</name>
+    <description>ex7_test-coverage</description>
     <properties>
         <java.version>17</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
