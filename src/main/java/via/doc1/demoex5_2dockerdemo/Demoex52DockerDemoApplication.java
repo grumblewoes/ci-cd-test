@@ -12,7 +12,7 @@ public class Demoex52DockerDemoApplication {
     @RequestMapping("/")
     public String index() {
         return "<body><h1>DevOps and Cloud</h1> " +
-                "<h2>Dockerizing Spring Boot Backend Application.</h2>" +
+                "<h2>Dockerizing Spring Boot Backend Application (exercise 5.2).</h2>" +
                 "<p>With Docker, we can containerize SEP4 back-end and front-end applications.</p></body>";
     }
     public static void main(String[] args) {
