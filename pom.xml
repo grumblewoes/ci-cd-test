@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>via.doc1</groupId>
-    <artifactId>ex7-test-coverage</artifactId>
+    <artifactId>ex7_test-coverage</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ex7_test-coverage</name>
     <description>ex7_test-coverage</description>
