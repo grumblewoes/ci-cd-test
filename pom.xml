@@ -5,15 +5,15 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.4</version>
+        <version>3.2.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>via.doc1</groupId>
-    <artifactId>ex7_test-coverage</artifactId>
+    <artifactId>ex8_test-coverage</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ex7_test-coverage</name>
-    <description>ex7_test-coverage</description>
+    <name>ex8_test-coverage</name>
+    <description>ex8_test-coverage</description>
     <properties>
         <java.version>17</java.version>
     </properties>
