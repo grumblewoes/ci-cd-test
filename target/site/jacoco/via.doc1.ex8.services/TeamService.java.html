@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TeamService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ex8_test-coverage</a> &gt; <a href="index.source.html" class="el_package">via.doc1.ex8.services</a> &gt; <span class="el_source">TeamService.java</span></div><h1>TeamService.java</h1><pre class="source lang-java linenums">package via.doc1.ex8.services;
+
+import org.springframework.stereotype.Service;
+import via.doc1.ex8.model.*;
+
+import java.util.List;
+import java.util.ArrayList;
+
+@Service
+<span class="fc" id="L10">public class TeamService {</span>
+<span class="fc" id="L11">    private static final List&lt;TeamMember&gt; team_members = new ArrayList&lt;&gt;();</span>
+
+    static {
+        //Initialize Data
+<span class="fc" id="L15">        Task t1 = new Task(&quot;Task1&quot;, &quot;IoT Pipeline&quot;,</span>
+                &quot;Create CD pipeline for the IoT service&quot;);
+<span class="fc" id="L17">        Task t2 = new Task(&quot;Task2&quot;, &quot;Cloud Pipeline&quot;,</span>
+                &quot;Create CD pipeline for the backend component&quot;);
+<span class="fc" id="L19">        Task t3 = new Task(&quot;Task3&quot;, &quot;Web Pipeline&quot;,</span>
+                &quot;Create CD pipeline for the frontend component&quot;);
+<span class="fc" id="L21">        Task t4 = new Task(&quot;Task4&quot;, &quot;DOC Doc&quot;,</span>
+                &quot;Create the documentation for the DevOps section&quot;);
+
+<span class="fc" id="L24">        TeamMember chase = new TeamMember(</span>
+                &quot;Member1&quot;, &quot;Chase&quot;, &quot;chase@pawpatrol.org&quot;,
+<span class="fc" id="L26">                new ArrayList&lt;&gt;(List.of(t1, t3, t4)));</span>
+<span class="fc" id="L27">        TeamMember dora = new TeamMember(</span>
+                &quot;Member2&quot;, &quot;Dora&quot;, &quot;d@explorer.org&quot;,
+<span class="fc" id="L29">                new ArrayList&lt;&gt;(List.of(t1, t2, t4)));</span>
+
+<span class="fc" id="L31">        team_members.add(chase);</span>
+<span class="fc" id="L32">        team_members.add(dora);</span>
+<span class="fc" id="L33">    }</span>
+
+    public TeamMember getTeamMember(String memberId) {
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        for (TeamMember m : team_members) {</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">            if (m.getId().equals(memberId)) {</span>
+<span class="nc" id="L38">                return m;</span>
+            }
+<span class="nc" id="L40">        }</span>
+<span class="nc" id="L41">        return null;</span>
+    }
+
+    public List&lt;Task&gt; getTasks(String memberId) {
+<span class="nc" id="L45">        TeamMember member = getTeamMember(memberId);</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        return member == null ? null : member.getTasks();</span>
+    }
+
+    public Task getTask(String memberId, String taskId) {
+<span class="nc" id="L50">        TeamMember member = getTeamMember(memberId);</span>
+
+<span class="nc bnc" id="L52" title="All 2 branches missed.">        if (member == null) {</span>
+<span class="nc" id="L53">            return null;</span>
+        }
+
+<span class="nc bnc" id="L56" title="All 2 branches missed.">        for (Task t : member.getTasks()) {</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">            if (t.getId().equals(taskId)) {</span>
+<span class="nc" id="L58">                return t;</span>
+            }
+<span class="nc" id="L60">        }</span>
+
+<span class="nc" id="L62">        return null;</span>
+
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
