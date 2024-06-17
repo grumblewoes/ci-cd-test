@@ -54,4 +54,4 @@ jobs:
       contents: read
       pages: write
       id-token: write
-    uses: ./.github/workflows/test_coverage_report.yaml
+    uses: ./.github/workflows/test_coverage_report.yml
